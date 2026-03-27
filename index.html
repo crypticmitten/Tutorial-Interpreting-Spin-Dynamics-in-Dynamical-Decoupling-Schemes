@@ -1,0 +1,155 @@
+<!doctype html>
+<!-- 
+##############################################################
+Ignore this boilerplate if you're just trying to edit the text.
+Skip to the part that says 'The real text begins here'
+##############################################################
+
+Based on this theme: https://github.com/broccolini/dinky , which mentioned that attribution is appreciated. Thanks, broccolini!
+-->
+<html lang="en">
+  <head>
+    <base target="_blank">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="citation_title" content="Tutorial: Interpreting Spin Dynamics in Dynamical Decoupling Schemes">
+    <meta name="citation_author" content="Charlie J. Patrickson">
+    <meta name="citation_author" content="Isaac R. Bailey">
+    <meta name="citation_author" content="Antonio E. Orazzo">
+    <meta name="citation_author" content="Luca Dellantonio">
+    <meta name="citation_author" content="Isaac J. Luxmoore">
+    <meta name="citation_publication_date" content="27/03/2026">
+    <meta name="citation_journal_title" content="Github.io">
+    <meta name="citation_pdf_url" content="">
+    <title>Tutorial: Interpreting Spin Dynamics in Dynamical Decoupling Schemes</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/prism.css">
+    <!--[if lt IE 9]>
+    <script src="javascript/html5shiv/html5shiv.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+    <script src="javascript/scale-fix/scale.fix.js"></script>
+    <script async  src="javascript/Minimal-MathJax/MathJax.js?config=TeX-AMS_CHTML"></script>
+    <script src="javascript/update_figures.js"></script>
+    <script src="javascript/reference_list/reference_list.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1 class="header">Tutorial: Interpreting Spin Dynamics in Dynamical Decoupling Schemes</h1>
+        <ul>
+          <li class="download"><a class="buttons" href="">Download ZIP</a></li>
+          <li><a class="buttons github" href="">View On GitHub</a></li>
+          <li><a class="buttons pdf" href="">Download PDF</a></li>
+        </ul>
+        <p class="header">This project is maintained by <a class="header name" href="https://github.com/Charlie-Patrickson">Charlie-Patrickson</a> in the Luxmoore lab</a>, and was funded by <a class="header name" href=""></a></p>
+      </header>
+<!-- 
+##############################################################
+The real text begins here.
+##############################################################
+ -->
+<section>
+<h1>Research article</h1>
+<h2>Tutorial: Interpreting Spin Dynamics in Dynamical Decoupling Schemes</h2>
+<p class="author_list">
+  Charlie J. Patrickson<sup>1, 2, *</sup>, Isaac R. Bailey<sup>2</sup>, Antonio E. Orazzo<sup>2</sup>, Luca Dellantonio<sup>2</sup>, Isaac J. Luxmoore<sup>1</sup>
+</p>
+
+<p class="author_affiliations">
+  <sup>1</sup>Department of Engineering, University of Exeter, EX4 4QF, UK<br>
+  <sup>2</sup>Department of Physics, University of Exeter, EX4 4QF, UK
+</p>
+<p class="contact_email"><sup>*</sup>Permanent email: <a href="mailto:cp728@exeter.ac.uk" target="_self"></a></p>
+
+<a id="Abstract" href="#Abstract" target="_self">
+  <h4>
+  Abstract
+  </h4>
+</a>
+<p class="abstract">
+
+</p>
+
+<noscript>
+<h3>Your browser doesn't seem to support Javascript. This document uses Javascript for interactive figures, math typesetting, and to automatically generate the reference list. Either activate Javascript, or use the "Download PDF" link above if you want properly typeset math and a reference list.
+</h3>
+</noscript>
+
+<h3>
+Introduction
+</h3>
+<p>
+
+</p>
+
+  <figure id="">
+<img src="./images/cartoon/scarlet_FMN.gif" alt="mScarlet cartoon" id="scarlet_cartoon">
+<table class="figure_controls">
+  <tr>
+  <td>Sample: </td><td><select id="scarlet_cartoon_traces" onchange="update_scarlet_cartoon_figure()">
+    <option value="scarlet_FMN.gif" selected="selected">mScarlet + FMN photoproduct</option>
+    <option value="scarlet_cinn.gif">mScarlet + cinnavalininate</option>
+    <option value="scarlet_wst8.gif">mScarlet + WST-8</option>
+  </select></td>
+    </tr>
+</table>
+ <figcaption>
+
+  <strong>Holder</strong>
+  Holder<a href="#scarlet_FMN_figure" target="_self">Figure 4</a>
+
+ </figcaption>
+</figure><p></p>
+
+<h3>Author Contributions</h3>
+
+
+<h3>Acknowledgments</h3>
+<p>
+</p>
+
+
+<h3>
+Open-source software</h3>
+<p>
+As always, our work here depends critically on the open-source software community. Among our crucial dependencies:
+</p>
+
+<ul>
+ <li>
+<a href="https://python.org">Python</a>
+ </li>
+ <li>
+<a href="https://numpy.org">Numpy</a>
+
+[<a class="citation" href="http://doi.org/10.1038/s41586-020-2649-2" title="Array programming with NumPy; Charles R. Harris, K. Jarrod Millman, Stéfan J. van der Walt, Ralf Gommers, Pauli Virtanen, David Cournapeau, Eric Wieser, Julian Taylor, Sebastian Berg, Nathaniel J. Smith, Robert Kern, Matti Picus, Stephan Hoyer, Marten H. van Kerkwijk, Matthew Brett, Allan Haldane, Jaime Fernández del Río, Mark Wiebe, Pearu Peterson, Pierre Gérard-Marchant, Kevin Sheppard, Tyler Reddy, Warren Weckesser, Hameer Abbasi, Christoph Gohlke &amp; Travis E. Oliphant; Nature 585, 357–362 (2020)">Harris 2020</a>]
+ </li>
+ <li>
+<a href="https://scipy.org">Scipy</a> 
+
+[<a class="citation" href="http://doi.org/10.1038/s41592-019-0686-2" title="SciPy 1.0: Fundamental Algorithms for Scientific Computing in Python; Pauli Virtanen, Ralf Gommers, Travis E. Oliphant, Matt Haberland, Tyler Reddy, David Cournapeau, Evgeni Burovski, Pearu Peterson, Warren Weckesser, Jonathan Bright, Stéfan J. van der Walt, Matthew Brett, Joshua Wilson, K. Jarrod Millman, Nikolay Mayorov, Andrew R. J. Nelson, Eric Jones, Robert Kern, Eric Larson, CJ Carey, İlhan Polat, Yu Feng, Eric W. Moore, Jake VanderPlas, Denis Laxalde, Josef Perktold, Robert Cimrman, Ian Henriksen, E.A. Quintero, Charles R Harris, Anne M. Archibald, Antônio H. Ribeiro, Fabian Pedregosa, Paul van Mulbregt, and SciPy 1.0 Contributors; Nature Methods, 17(3) 261-272 (2020)">Virtanen 2020</a>]
+ </li>
+ <li>
+<a href="https://matplotlib.org">Matplotlib</a>
+
+<p>We sincerely thank the authors of these projects for enabling our work.</p>
+  
+<noscript>
+<h3>Your browser doesn't seem to support Javascript. This document uses Javascript to generate a reference list, which would normally be displayed here. Either activate Javascript, or use the "Download PDF" link above if you want to see the reference list.</h3></noscript>
+
+</section>
+<footer>
+  <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="./images/cc_by_4p0.png"></a>
+
+  <p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a></small></p>
+</footer>
+</div>
+ <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+</body>
+</html>
